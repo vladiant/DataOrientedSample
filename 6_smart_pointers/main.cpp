@@ -1,5 +1,6 @@
 #include <chrono>
 #include <iostream>
+#include <memory>
 #include <vector>
 
 #include "ComponentsManager.h"
@@ -7,7 +8,8 @@
 
 constexpr int kLoopCount = 20;
 
-void CacheUnfriendlyMethod(std::vector<GameObject*>& vecObjects);
+void CacheUnfriendlyMethod(
+    std::vector<std::shared_ptr<GameObject>>& vecObjects);
 
 void CacheFriendlyMethod(ComponentsManager& compMgr);
 
@@ -15,21 +17,19 @@ auto main() -> int {
   const int numObjects = 3500000;
 
   auto compMgr = ComponentsManager(numObjects);
-  std::vector<GameObject*> vecObjects = {};
+  std::vector<std::shared_ptr<GameObject>> vecObjects;
 
   for (int i = 0; i < numObjects; i++) {
-    auto* newObj = new GameObject();
-    vecObjects.emplace_back(newObj);
-    compMgr.CreateComponentsForId(newObj->GetId());
+    vecObjects.push_back(std::make_shared<GameObject>());
+    compMgr.CreateComponentsForId(vecObjects.back()->GetId());
   }
 
   CacheUnfriendlyMethod(vecObjects);
   CacheFriendlyMethod(compMgr);
-
-  for (auto& object : vecObjects) delete object;
 }
 
-void CacheUnfriendlyMethod(std::vector<GameObject*>& vecObjects) {
+void CacheUnfriendlyMethod(
+    std::vector<std::shared_ptr<GameObject>>& vecObjects) {
   //############## POINTER CHASE/CACHE UNFRIENDLY ##############
   std::cout << "Measuring non cache friendly (pointer chase) mode...\n";
 
