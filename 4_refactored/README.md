@@ -11,8 +11,8 @@
 
 | Case | Time, ms |
 |----|---|
-| Non-cache friendly | 4138 |
-| Cache friendly | 2802 |
+| Non-cache friendly | 3605 |
+| Cache friendly | 2521 |
 
 ## Executable size
 

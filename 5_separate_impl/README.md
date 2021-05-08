@@ -2,15 +2,15 @@
 
 ## Changes from previous version 
 
-* Separeated implementations from declarations
+* Separated implementations from declarations
 * Used vector instead of raw memory buffer
 
 ## Performance 
 
 | Case | Time, ms |
 |----|---|
-| Non-cache friendly | 4079 |
-| Cache friendly | 2898 |
+| Non-cache friendly | 3606 |
+| Cache friendly | 2610 |
 
 ## Executable size
 

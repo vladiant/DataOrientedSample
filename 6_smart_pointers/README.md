@@ -1,4 +1,4 @@
-# Version 5
+# Version 6
 
 ## Changes from previous version 
 
@@ -8,8 +8,8 @@
 
 | Case | Time, ms |
 |----|---|
-| Non-cache friendly | 5624 |
-| Cache friendly | 2946 |
+| Non-cache friendly | 4780 |
+| Cache friendly | 2612 |
 
 ## Executable size
 
