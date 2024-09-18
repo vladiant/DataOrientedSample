@@ -50,6 +50,8 @@ Convenient way to look at only some columns
 
 ### filter_row_select_gen
 
+### filter_function_select_gen
+
 ## References
 * [C++ Cache Friendly Data + Functional + Ranges = ❤️ - Björn Fahller - C++ on Sea 2024](https://www.youtube.com/watch?v=XJzs4kC9d-Y)
 * [CppCon 2014: Mike Acton "Data-Oriented Design and C++"](https://www.youtube.com/watch?v=rX0ItVEVjHc)
