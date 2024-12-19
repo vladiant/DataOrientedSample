@@ -53,6 +53,12 @@ A stable row ID to lookup objects
 
 ### filter_row_id_gen
 
+| implementation    | cache-references | cache-misses | instructions | cpu-cycles   | branches      | branch-misses | duration_time, ns |
+| ----------------- | ---------------- | ------------ | ------------ | ------------ | ------------- | ------------- | ----------------- |
+| row_id            | 730259804        | 3.03%        | 45115157422  | 10638601456  |  10020181343  | 1144980       | 2797277504        |
+| filter_templated  | 6461247140       | 0.58%        | 400404359239 | 151198426981 |  100070611567 | 1645223       | 39182453364       |
+| filter_row_id_gen | 7024634018       | 6.65%        | 400831896052 | 155329132897 |  100150174742 | 2206328       | 41359616969       |
+
 ## Iterator interface to work with ranges
 
 ### filter_iterators
