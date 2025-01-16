@@ -67,6 +67,12 @@ A stable row ID to lookup objects
 
 ### filter_iterators_row
 
+| implementation           | cache-references | cache-misses | instructions | cpu-cycles   | branches      | branch-misses | duration_time, ns |
+| ------------------------ | ---------------- | ------------ | ------------ | ------------ | ------------- | ------------- | ----------------- |
+| filter_iterators         | 6506112395       | 15.68%       | 250647487743 | 63442406513  |  100124569171 | 1337880       | 17404102330       |
+| iterators_row            | 727336166        | 8.28%        | 45110108412  | 11200622887  |  10003814921  | 1211890       | 3055467377        |
+| filter_iterators_row     | 6379862229       | 13.41%       | 250544060670 | 63052966957  |  100023747197 | 1414666       | 17361396519       |
+
 ## Selecting columns
 Convenient way to look at only some columns
 
