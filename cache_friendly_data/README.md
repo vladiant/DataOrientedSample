@@ -80,6 +80,11 @@ Convenient way to look at only some columns
 
 ### filter_function_select_gen
 
+| implementation              | cache-references | cache-misses | instructions | cpu-cycles   | branches       | branch-misses | duration_time, ns |
+| --------------------------- | ---------------- | ------------ | ------------ | ------------ | -------------- | ------------- | ----------------- |
+| filter_function_select_gen  | 6563362050       | 4.98%        | 249940467170 | 57933370119  |  99876758391   | 1312274       | 15669078498       |
+| filter_row_select_gen       | 6692315373       | 2.70%        | 250268270713 | 54449520531  |  100032415175  | 1040007       | 14467637337       |
+
 ## References
 * [C++ Cache Friendly Data + Functional + Ranges = ❤️ - Björn Fahller - C++ on Sea 2024](https://www.youtube.com/watch?v=XJzs4kC9d-Y)
 * [CppCon 2014: Mike Acton "Data-Oriented Design and C++"](https://www.youtube.com/watch?v=rX0ItVEVjHc)
