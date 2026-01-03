@@ -21,7 +21,7 @@ class GameObject : protected Object {
     m_vecComponents.push_back(new ComponentPhysicsDummy(this));
     m_vecComponents.push_back(new ComponentCollisionDummy(this));
   };
-  
+
   ~GameObject() override {
     for (auto& comp : m_vecComponents) delete comp;
   };

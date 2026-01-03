@@ -21,9 +21,8 @@ object data[N];
 
 template <typename D, typename G, size_t Size>
 auto generate(D& d, G& g, object (&aData)[Size]) {
-  std::for_each(std::begin(aData), std::end(aData), [&](auto& elem) {
-    elem = object{d(g), d(g), d(g), d(g)};
-  });
+  std::for_each(std::begin(aData), std::end(aData),
+                [&](auto& elem) { elem = object{d(g), d(g), d(g), d(g)}; });
   return true;
 }
 

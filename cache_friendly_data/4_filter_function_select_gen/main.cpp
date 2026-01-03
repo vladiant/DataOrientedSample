@@ -213,7 +213,9 @@ template <typename T>
 concept row_type = row_type_v<T>;
 
 template <size_t... Cs, typename F>
-auto select(F&& f) requires(!row_type<std::remove_cvref_t<F>>) {
+auto select(F&& f)
+  requires(!row_type<std::remove_cvref_t<F>>)
+{
   return [f = std::forward<F>(f)]<typename T, typename Is>(row<T, Is> r) {
     return f(select<Cs...>(r));
   };

@@ -21,9 +21,8 @@ std::uniform_int_distribution n{0, kMaxValue};
 template <typename D, typename G>
 auto generate(D& d, G& g) {
   std::array<object, N> data;
-  std::for_each(std::begin(data), std::end(data), [&](auto& elem) {
-    elem = object{d(g), d(g), d(g), d(g)};
-  });
+  std::for_each(std::begin(data), std::end(data),
+                [&](auto& elem) { elem = object{d(g), d(g), d(g), d(g)}; });
   return data;
 }
 

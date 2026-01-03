@@ -25,32 +25,22 @@ class GameObject : protected Object {
   ~GameObject() override {
     for (size_t i = 0; i < m_vecComponents.size();) {
       delete static_cast<ComponentAIDummy<>*>(m_vecComponents[i++]);
-      delete static_cast<ComponentPhysicsDummy<>*>(
-          m_vecComponents[i++]);
-      delete static_cast<ComponentCollisionDummy<>*>(
-          m_vecComponents[i++]);
+      delete static_cast<ComponentPhysicsDummy<>*>(m_vecComponents[i++]);
+      delete static_cast<ComponentCollisionDummy<>*>(m_vecComponents[i++]);
       delete static_cast<ComponentAIDummy<>*>(m_vecComponents[i++]);
-      delete static_cast<ComponentPhysicsDummy<>*>(
-          m_vecComponents[i++]);
-      delete static_cast<ComponentCollisionDummy<>*>(
-          m_vecComponents[i++]);
+      delete static_cast<ComponentPhysicsDummy<>*>(m_vecComponents[i++]);
+      delete static_cast<ComponentCollisionDummy<>*>(m_vecComponents[i++]);
     }
   };
 
   void Update() override {
     for (size_t i = 0; i < m_vecComponents.size();) {
-      static_cast<ComponentAIDummy<>*>(m_vecComponents[i++])
-          ->Update();
-      static_cast<ComponentPhysicsDummy<>*>(m_vecComponents[i++])
-          ->Update();
-      static_cast<ComponentCollisionDummy<>*>(m_vecComponents[i++])
-          ->Update();
-      static_cast<ComponentAIDummy<>*>(m_vecComponents[i++])
-          ->Update();
-      static_cast<ComponentPhysicsDummy<>*>(m_vecComponents[i++])
-          ->Update();
-      static_cast<ComponentCollisionDummy<>*>(m_vecComponents[i++])
-          ->Update();
+      static_cast<ComponentAIDummy<>*>(m_vecComponents[i++])->Update();
+      static_cast<ComponentPhysicsDummy<>*>(m_vecComponents[i++])->Update();
+      static_cast<ComponentCollisionDummy<>*>(m_vecComponents[i++])->Update();
+      static_cast<ComponentAIDummy<>*>(m_vecComponents[i++])->Update();
+      static_cast<ComponentPhysicsDummy<>*>(m_vecComponents[i++])->Update();
+      static_cast<ComponentCollisionDummy<>*>(m_vecComponents[i++])->Update();
     }
   }
 

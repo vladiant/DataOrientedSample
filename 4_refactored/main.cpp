@@ -28,7 +28,7 @@ auto main() -> int {
 }
 
 void CacheUnfriendlyMethod(std::vector<GameObject*>& vecObjects) {
-  //############## POINTER CHASE/CACHE UNFRIENDLY ##############
+  // ############## POINTER CHASE/CACHE UNFRIENDLY ##############
   std::cout << "Measuring non cache friendly (pointer chase) mode...\n";
 
   auto pointerChaseStart = std::chrono::steady_clock::now();
@@ -46,7 +46,7 @@ void CacheUnfriendlyMethod(std::vector<GameObject*>& vecObjects) {
 }
 
 void CacheFriendlyMethod(ComponentsManager& compMgr) {
-  //############## LOCALITY/CACHE FRIENDLY ##############
+  // ############## LOCALITY/CACHE FRIENDLY ##############
   std::cout << "Measuring cache friendly (locality) mode...\n";
 
   auto cacheStart = std::chrono::steady_clock::now();
