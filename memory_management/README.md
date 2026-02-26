@@ -55,6 +55,8 @@ Ultra fast, temporary
 * Used in Trading
 
 ## Slab Allocator
+* Pool allocator generalization for objects with different sizes
+* Sizes - powers of 2 - 8, 16, 32...
 
 ## Tracking Allocator
 
@@ -65,3 +67,4 @@ Ultra fast, temporary
 * [Кастомные аллокаторы для игровых движков: arena, pool и slab на C++](https://habr.com/ru/companies/otus/articles/988086/)
 * [CppCon 2017: Bob Steagall “How to Write a Custom Allocator”](https://www.youtube.com/watch?v=kSWfushlvB8)
 * [CppCon 2015: Andrei Alexandrescu “std::allocator...”](https://www.youtube.com/watch?v=LIb3L4vKZ7U)
+* [Special Allocators with C++17](https://www.modernescpp.com/index.php/special-allocators-with-c17/)

@@ -49,3 +49,5 @@ Sample for Data Oriented design in C++
 * [The price of dynamic memory: Allocation](https://johnysswlab.com/the-price-of-dynamic-memory-allocation/)
 
 * <https://github.com/rollbear/cache-friendly-samples>
+
+* [More Speed & Simplicity: Practical Data-Oriented Design in C++ - Vittorio Romeo - CppCon 2025](https://www.youtube.com/watch?v=SzjJfKHygaQ)
