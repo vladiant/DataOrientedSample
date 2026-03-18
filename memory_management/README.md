@@ -68,3 +68,4 @@ Ultra fast, temporary
 * [CppCon 2017: Bob Steagall “How to Write a Custom Allocator”](https://www.youtube.com/watch?v=kSWfushlvB8)
 * [CppCon 2015: Andrei Alexandrescu “std::allocator...”](https://www.youtube.com/watch?v=LIb3L4vKZ7U)
 * [Special Allocators with C++17](https://www.modernescpp.com/index.php/special-allocators-with-c17/)
+* [Performance cost std::pmr vs std containers](https://www.sapnag.me/blog/cppdev/2025-12-26-containers-std-vs-pmr/)
